@@ -22,12 +22,6 @@ pipeline{
 			'''
 			}
 		}
-         stage('VeryLast') {
-		steps{
-		sh '''
-			echo "This is my Last stage"
-			'''
-			}
-		}
+       
 	}
 }
