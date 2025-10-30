@@ -1,0 +1,19 @@
+pipeline{
+	agent any
+	stages{
+		stage('Hello') {
+		steps{
+			sh '''
+				echo "Hello this is from groovy"
+			'''
+			}
+		}
+		stage('Bye') {
+		steps{
+		sh '''
+			echo "This is my second stage"
+			'''
+			}
+		}
+	}
+}
