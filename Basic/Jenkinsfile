@@ -8,10 +8,17 @@ pipeline{
 			'''
 			}
 		}
-		stage('Bye') {
+		stage('Middle') {
 		steps{
 		sh '''
-			echo "This is my second stage"
+			echo "This is my Middle stage"
+			'''
+			}
+		}
+        stage('Final') {
+		steps{
+		sh '''
+			echo "This is my Final stage"
 			'''
 			}
 		}
