@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    parameters {
+        string(name:'ENV', defaultValue:'Prod', description:'Testing')
+    }
+
+    stages{
+        stage('build-stage'){
+            stages{
+                stage('Fiest Stage') {
+                   steps {
+
+            sh '''
+                echo "This is jenkin file"
+                echo "Testing parameters"
+                echo "Hope it works"    
+            '''
+            } 
+                }
+            }
+            
+            stage('build-stage'){
+                stages{
+                    stage('Second stage') {
+                        steps {
+
+            sh '''
+                echo "This is jenkin file"
+                echo "Testing parameters"
+                echo "Hope it works"    
+            '''
+            }
+                    }
+                }
+            
+        }
+    }
+}
+}
