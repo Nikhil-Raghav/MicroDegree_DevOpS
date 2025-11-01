@@ -1,16 +1,19 @@
 pipeline {
     agent any
     parameters {
-        string(name:'ENV', defaultValue:'Prod', Description:'Testing')
+        string(name:'ENV', defaultValue:'Prod', description:'Testing')
     }
 
     stages{
         stage('build-stage'){
+            steps {
+
             sh '''
                 echo "This is jenkin file"
                 echo "Testing parameters"
                 echo "Hope it works"    
             '''
+            }
         }
     }
 }
